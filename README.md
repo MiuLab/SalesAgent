@@ -1,4 +1,8 @@
-# SalesAgent
+# Injecting Salesperson’s Dialogue Strategies in Large Language Models with Chain-of-Thought Reasoning
+This repo is the implementation of the paper "Injecting Salesperson’s Dialogue Strategies in Large Language Models with Chain-of-Thought Reasoning" by [Wen-Yu Chang and Yun-Nung Chen](https://arxiv.org/pdf/2404.18564)
+
+## Abstract
+Recent research in dialogue systems and corpora has focused on two main categories: taskoriented (TOD) and open-domain (chit-chat) dialogues. TOD systems help users accomplish specific tasks, while open-domain systems aim to create engaging conversations. However, in real-world scenarios, user intents are often revealed during interactions. A recent study introduced SalesBot, which simulates dialogues transitioning from chit-chat to task-oriented scenarios to train sales agents. Unfortunately, the initial data lacked smooth transitions and coherent long-turn dialogues, resulting in poor naturalness in sales-customer interactions. To address these issues, this paper presents SalesBot 2.0, an improved dataset. It leverages commonsense knowledge from large language models (LLMs) through strategic prompting. Additionally, we introduce a novel model called SALESAGENT, trained on salesperson’s interactions, using chain-of-thought (CoT) reasoning. This model excels in transitioning topics, understanding user intents, and selecting appropriate strategies. Experiments using diverse user simulations validate the effectiveness of our method in controlling dialogue strategies in LLMs. Furthermore, SalesBot 2.0 enhances coherence and reduces aggression, facilitating better model learning for sales-customer interactions
 
 ## Generate SalesBot 2.0 Datasets from Scratch
 ### 1. Install the required packages
@@ -40,9 +44,6 @@ python create_salesbot1_dataset.py
 cd scripts/
 bash run_finetune.sh <path_to_dataset> <path_to_save_model>
 ```
-
-
-
 ## TODO:
 - [x] Push Raw materials
 - [x] Remove all API keys
