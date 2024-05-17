@@ -44,11 +44,11 @@ bash run_finetune.sh <path_to_dataset> <path_to_save_model>
 
 
 ## TODO:
-- [*] Push Raw materials
-- [*] Remove all API keys
+- [x] Push Raw materials
+- [x] Remove all API keys
 - [ ] Remove useless files
 - [ ] Organize the project and code
 - [ ] Add a proper license
 - [ ] Add a proper README
 - [ ] Referece the original project
-- [*] Add model source
+- [x] Add model source
