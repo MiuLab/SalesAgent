@@ -7,16 +7,16 @@ Recent research in dialogue systems and corpora has focused on two main categori
 ## Model
 You can find the model [here](https://huggingface.co/miulab/SalesBot2_CoT)
 ### Interaction with the model
-```
+```bash
 cd scripts/
 python interactive.py --model_path <path_to_model> --temperature 0.7
-```
-```
 ```
 ## Generate SalesBot 2.0 Datasets and Train Model from Scratch
 ### 1. Install the required packages
 ```bash
-pip install -r requirements.txt
+pip3 install openai, tqdm, fast
+cd ./FastChat/
+pip3 install -e ".[model_worker,webui,train]"
 ```
 ### 2. Rewrite
 ```bash
