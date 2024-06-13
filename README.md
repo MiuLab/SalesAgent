@@ -1,17 +1,28 @@
 # Injecting Salesperson’s Dialogue Strategies in Large Language Models with Chain-of-Thought Reasoning
-This repo is the implementation of the paper [Injecting Salesperson’s Dialogue Strategies in Large Language Models with Chain-of-Thought Reasoning](https://arxiv.org/pdf/2404.18564) by Wen-Yu Chang and Yun-Nung Chen
+This repo is the implementation of the paper [Injecting Salesperson’s Dialogue Strategies in Large Language Models with Chain-of-Thought Reasoning](https://arxiv.org/pdf/2404.18564), including the dataset SalesBot 2.0 (revised from [SalesBot 1.0](https://github.com/MiuLab/SalesBot)) and the fine-tuned model.
 
-## Abstract
-Recent research in dialogue systems and corpora has focused on two main categories: taskoriented (TOD) and open-domain (chit-chat) dialogues. TOD systems help users accomplish specific tasks, while open-domain systems aim to create engaging conversations. However, in real-world scenarios, user intents are often revealed during interactions. A recent study introduced SalesBot, which simulates dialogues transitioning from chit-chat to task-oriented scenarios to train sales agents. Unfortunately, the initial data lacked smooth transitions and coherent long-turn dialogues, resulting in poor naturalness in sales-customer interactions. To address these issues, this paper presents SalesBot 2.0, an improved dataset. It leverages commonsense knowledge from large language models (LLMs) through strategic prompting. Additionally, we introduce a novel model called SALESAGENT, trained on salesperson’s interactions, using chain-of-thought (CoT) reasoning. This model excels in transitioning topics, understanding user intents, and selecting appropriate strategies. Experiments using diverse user simulations validate the effectiveness of our method in controlling dialogue strategies in LLMs. Furthermore, SalesBot 2.0 enhances coherence and reduces aggression, facilitating better model learning for sales-customer interactions
+Please cite the following reference if you use the released data or model.
+
+```
+@inproceedings{chang2024injecting,
+      title={Injecting Salesperson's Dialogue Strategies in Large Language Models with Chain-of-Thought Reasoning}, 
+      author={Wen-Yu Chang and Yun-Nung Chen},
+      year={2024},
+      booktitle={Findings of the Association for Computational Linguistics: ACL 2024}
+}
+```
+
 
 ## Model
-You can find the model [here](https://huggingface.co/miulab/SalesBot2_CoT)
+You can find the model (llama-2-7B) fine-tuned on SalesBot 2.0 data [here](https://huggingface.co/miulab/SalesBot2_CoT).
 ### Interaction with the model
 ```bash
 cd scripts/
 python interactive.py --model_path <path_to_model> --temperature 0.7
 ```
 ## Generate SalesBot 2.0 Datasets and Train Model from Scratch
+![image](https://github.com/MiuLab/SalesAgent/assets/2268109/1569238d-aa01-497f-9d2a-f5cec101f6ad)
+
 ### 1. Install the required packages
 ```bash
 pip3 install openai, tqdm, fast
@@ -54,14 +65,4 @@ cd scripts/
 bash run_finetune.sh <path_to_dataset> <path_to_save_model>
 ```
 
-## Citation
-```
-@misc{chang2024injecting,
-      title={Injecting Salesperson's Dialogue Strategies in Large Language Models with Chain-of-Thought Reasoning}, 
-      author={Wen-Yu Chang and Yun-Nung Chen},
-      year={2024},
-      eprint={2404.18564},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}
-``
+
