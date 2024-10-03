@@ -1,14 +1,23 @@
 # Injecting Salesperson’s Dialogue Strategies in Large Language Models with Chain-of-Thought Reasoning
 This repo is the implementation of the paper [Injecting Salesperson’s Dialogue Strategies in Large Language Models with Chain-of-Thought Reasoning](https://arxiv.org/pdf/2404.18564), including the dataset SalesBot 2.0 (revised from [SalesBot 1.0](https://github.com/MiuLab/SalesBot)) and the fine-tuned model.
 
-Please cite the following reference if you use the released data or model.
+Please cite the following references if you use the released data or model.
 
 ```
 @inproceedings{chang2024injecting,
       title={Injecting Salesperson's Dialogue Strategies in Large Language Models with Chain-of-Thought Reasoning}, 
       author={Wen-Yu Chang and Yun-Nung Chen},
       year={2024},
-      booktitle={Findings of the Association for Computational Linguistics: ACL 2024}
+      booktitle={Findings of the Association for Computational Linguistics: ACL 2024},
+      pages = "3798--3812"
+}
+```
+```
+@article{chang2023salesbot,
+  title={SalesBot 2.0: A Human-Like Intent-Guided Chit-Chat Dataset},
+  author={Chang, Wen-Yu and Chen, Yun-Nung},
+  journal={arXiv preprint arXiv:2308.14266},
+  year={2023}
 }
 ```
 
