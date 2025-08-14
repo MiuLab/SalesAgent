@@ -151,7 +151,7 @@ def main(args):
                 print(f"User: {msg}")
                 history_string = ""
                 if args.agent_model != "meta-llama/Llama-2-7b-chat-hf":
-                    for turn in history[1:-1]:
+                    for turn in history[2:-1]:
                         role = ""
                         if turn["role"] == "assistant":
                             role = "User"
@@ -159,7 +159,7 @@ def main(args):
                             role = "Agent"
                         history_string += role + ": " + turn["content"] + "\n"
                 else:
-                    for turn in history[1:]:
+                    for turn in history[2:]:
                         role = ""
                         if turn["role"] == "assistant":
                             role = "User"
